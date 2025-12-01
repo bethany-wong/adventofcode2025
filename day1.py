@@ -7,7 +7,7 @@ def part1(str, dial):
 
 def part2(str, dial):
     value = int(str[1:])
-    threshold = 0 if dial == 0 else (dial if str[0] == "L" else (100 - dial))
+    threshold = 100 if dial == 0 else (dial if str[0] == "L" else (100 - dial))
     zero_cnt = (1 if value % 100 >= threshold else 0) + math.floor(value/100)
     return [zero_cnt, part1(str, dial)[1]]
 
