@@ -2,10 +2,7 @@ import math
 
 def part1(str, dial):
     value = int(str[1:])
-    if str[0] == "R":
-        dial += value
-    else:
-        dial -= value
+    dial = dial + value if str[0] == "R" else dial - value
     return [1 if dial % 100 == 0 else 0, dial % 100]
 
 def part2(str, dial):
