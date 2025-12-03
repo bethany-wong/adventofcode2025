@@ -8,7 +8,6 @@ def find_max(line, start_index, max_num): # find the first occurrence of largest
             max_index = i
     return max_index
 
-
 def find_largest_number(line, start_index, length):
     if length == 0:
         return ""
@@ -17,7 +16,6 @@ def find_largest_number(line, start_index, length):
         if index != -1 and index < len(line) - (length - 1):
             return line[index]+find_largest_number(line, index + 1, length - 1)
     return ""
-
 
 def main(input, part2=False):
     sum = 0
